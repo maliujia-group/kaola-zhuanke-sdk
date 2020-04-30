@@ -1,0 +1,21 @@
+{
+  "name": "skyfile/kaola-zhuanke-sdk",
+  "description": "考拉赚客SDK",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "skyfile",
+      "email": "fengfilesky@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "KlZkSdk\\": "src/"
+    }
+  }
+}
