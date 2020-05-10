@@ -1,8 +1,8 @@
 <?php
 
-namespace KlzkSdk\Api;
+namespace KlZkSdk\Api;
 
-use KlZkSDK\Tools\GateWay;
+use KlZkSdk\Tools\GateWay;
 
 class Link extends GateWay
 {
@@ -14,7 +14,7 @@ class Link extends GateWay
                 'unionId'   => $unionId ?: $this->unionId,
                 'tc1'       => $tc1,
                 'tc2'       => $tc2,
-                'targetUrl' => $targetUrl
+                'targetUrl' => urlencode($targetUrl)
             ]);
     }
 }

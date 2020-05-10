@@ -1,8 +1,8 @@
 <?php
 
-namespace KlzkSdk\Api;
+namespace KlZkSdk\Api;
 
-use KlZkSDK\Tools\GateWay;
+use KlZkSdk\Tools\GateWay;
 
 class Goods extends GateWay
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace KlZkSDK\Tools;
+namespace KlZkSdk\Tools;
 
-use \KlZkSDK\KlZkFatory;
+use KlZkSdk\KlZkFatory;
 
 class GateWay
 {
