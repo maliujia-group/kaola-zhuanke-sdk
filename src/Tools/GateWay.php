@@ -91,7 +91,7 @@ class GateWay
         $postData = array_merge($publicData, $specialParameter);
 
         $result = Helpers::curl_post(self::API_URL . http_build_query($postData), $postData, [
-            'Accept：application/json; charset=UTF-8'
+            'Accept: application/json; charset=UTF-8'
         ]);
         return $this->parseReps($result, $raw);
     }
