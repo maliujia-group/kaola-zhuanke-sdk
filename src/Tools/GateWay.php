@@ -28,9 +28,9 @@ class GateWay
      */
     public function __construct(array $config, KlZkFatory $fatory)
     {
-        $this->unionId    = $config['unionId'] ?? '';
-        $this->appSecret  = $config['appSecret'];
-        $this->fatory     = $fatory;
+        $this->unionId = $config['unionId'] ?? '';
+        $this->appSecret = $config['appSecret'];
+        $this->fatory = $fatory;
     }
 
     protected function setError($message, $code = 0)
@@ -65,13 +65,13 @@ class GateWay
      */
     protected function baseParameter($method, array $specialParameter)
     {
-        $publicParameter         = array(
+        $publicParameter = [
             'v'          => '1.0',
             'signMethod' => 'md5',
             'timestamp'  => date('Y-m-d H:i:s', time()),
             'unionId'    => $this->unionId,
             'method'     => $method,
-        );
+        ];
         $publicParameter['sign'] = $this->getStringToSign(array_merge($publicParameter, $specialParameter));
         return $publicParameter;
     }
@@ -115,6 +115,6 @@ class GateWay
         if ($decodeObject['code'] != 200) {
             return $this->setError($decodeObject['desc'], $decodeObject['code']);
         }
-        return $decodeObject['data'];
+        return $decodeObject['data'] ?? [];
     }
 }
