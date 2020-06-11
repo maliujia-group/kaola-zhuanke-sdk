@@ -109,7 +109,7 @@ class GateWay
             return $this->setError($decodeObject);
         }
         if (is_null($decodeObject)) {
-            return $this->setError("Api返回结果为空");
+            return $this->setError("Api返回结果为空:" . $result);
         }
 
         if ($decodeObject['code'] != 200) {
